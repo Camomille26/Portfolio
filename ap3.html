@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Mathys gelez</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <nav>
+        <div class="profile">
+            <img src="images/Moi2.PNG" alt="Mathys">
+            <h1>Mathys Gelez</h1>
+        </div>
+        <ul>
+            <a href="index.html">
+                <li>Présentation</li>
+            </a>
+            <a href="ProjectSelect.html">
+                <li>Les projets</li>
+            </a>
+            <a href="Mon_CV.html">
+                <li>Mon CV</li>
+            </a>
+            <a href="StageSelect.html">
+                <li>Stage</li>
+            </a>
+            <a href="synthese.html">
+                <li>Tableau de Synthèse</li>
+            </a>
+
+        </ul>
+    </nav>
+
+    <section class="page-content">
+        <header>
+            <h1>AP3: Réalisation d'un site de vente en ligne</h1>
+            <h3>Objectif</h3>
+            <p>J'ai eu pour mission de concevoir un site internet de vente en ligne pour l'entreprise fictive ALL4SPORT.
+                Ainsi le site doit avoir plusieurs fonctionnalités:
+            </p>
+            <ul>
+                <li>- Faire apparaître les articles sur le site avec pour chacuns leurs pages produits.</li>
+                <li>- Localiser les articles pour afficher pour quel entrepôts et magasins les articles sont disponibles
+                </li>
+                <li>- Permettre à l'utilisateur de créer un compte client et de se connecter avec pour réaliser ses
+                    achats en mettant les produits dans son panier.</li>
+            </ul>
+            <p>Ainsi pour stocker toute ces informations il à fallu réaliser une base de donnée et utiliser le langage
+                PHP pour que le site codé et la base de donnée réalisé puisse échanger entre-elles.</p>
+            <br>
+            <h2>La réalisation de la base de données</h2>
+            <p>Je me suis chargé, comme pour l'AP2, de réaliser une base de donnée afin que le site puisse faire
+                apparaître les articles de manière dynamique en s'appuyant sur ceux enregistré dans la bdd.</p>
+            <p>La difficulté avec ce projet c'est que la base de donnée à dû être complexe en vu du nombre conséquent
+                d'information à stocker. Pour chaque article vendu sur le site il fallait renseigner ces informations:
+            </p>
+            <ul>
+                <li>- La référence du produit</li>
+                <li>- Le nom du fournisseur</li>
+                <li>- Le rayon dans lequel est stocké le produit</li>
+                <li>- Son coût unitaire HT (soit le coût d'achat)</li>
+                <li>- La description du produit</li>
+                <li>- La quantité en stock disponible sur le site</li>
+                <li>- La quantité en stock pour chaque magasin</li>
+                <li>- Le où les différents lieux où l'article est stocké (magasin ou entrepôt) exprimé par le nom de la
+                    ville.</li>
+            </ul>
+            <p>Pour chaque compte client il fallait également renseigner toute ces informations:</p>
+            <ul>
+                <li>- Le Code Client: Trois lettres puis 8 chiffres auto-incrémenté</li>
+                <li>- le Nom et Prénom</li>
+                <li>- L'Email</li>
+                <li>- Le numéro de Téléphone</li>
+                <li>- La Date de Naissance</li>
+                <li>- Le Nombre enfants (optionnel)</li>
+                <li>- L'Age enfants (optionnel)</li>
+                <li>- La Liste Sport Pratiqués</li>
+                <li>- L'Historique des achats</li>
+                <li>- La Date du dernier achat</li>
+            </ul>
+
+            <p>Voici donc les captures des différents travaux effectués pour chaque étape de la conception de la bdd (je
+                vous renvoie vers l'AP2 si vous voulez avoir une description plus avancé de chaque partie).</p>
+
+            <h3>Première étape: Réalisation du Dictionnaire de données</h3>
+            <img src="imagesAP3/Dictionnaire_données.PNG" style="height: 500px; width: 880px;">
+            <br>
+
+            <h3>Seconde étape: Réalisation du MCD</h3>
+            <img src="imagesAP3/MCD.PNG" style="height: 650px; width: 500px;">
+            <br>
+
+            <h3>Dernière étape: La construction de la BDD</h3>
+            <p>Voici l'affichage des noms de toutes les tables de la base de donnée:</p>
+            <img src="imagesAP3/workbench_nbTable.PNG" style="height: 300px; width: 250px;">
+            <br>
+            <p>Voici l'affichage de tout les champs de la table produit:</p>
+            <img src="imagesAP3/Fonctionnement_table_produit.PNG" style="height: 200px; width: 800px;">
+            <br>
+            <p>Voici l'affichage des données contenu dans la table produit:</p>
+            <img src="imagesAP3/Contenu_table_produit.PNG" style="height: 180px; width: 800px;">
+            <br>
+            <br>
+            <br>
+
+            <h2>Réalisation du site en PHP</h2>
+
+            <p>Avec une base de données établi correctement, je suis passé à la réalisation du code en PHP pour réaliser
+                les fonctions permettant d'intéragir avec la base de donnée. L'apparence n'a pas pu être correctement
+                faite de part une mauvaise répartitions du temps et les problèmes rencontrés au sein du groupe.</p>
+            <br>
+            <p>Afin de réaliser le site, j'ai respecté la norme de réalisation MVC (Model View Controller) qui consiste
+                à répartir les différentes fonctions du site en différent répertoire. Ainsi le répertoire "View"
+                regroupe toute les fonctions dédiés à l'apparence du site, le répertoire "Model" est dédié aux fonctions
+                intéragissant avec la base de données et le répertoire "Controller" contient les fichiers permettant
+                d'appeler les fonctions des deux autres répertoires pour assembler le site pour l'utilisateur.</p>
+            <img src="imagesAP3/PHP_mvc.PNG">
+            <br>
+            <p>Le fichier PHP contenu dans le répertoire model contient toute les différentes fonctions permettant
+                d'appeler la base de données pour récupérer des informations (par exemple afficher les détails de
+                l'article correspondant à l'image que sélectionne l'utilisateur, récupérer les identifiants des
+                utilisateurs pour comparer que ceux entrer par l'utilisateur correspondent bien à un compte existant
+                ect...).</p>
+            <img src="imagesAP3/PHP_modelBDD.PNG" style="height: 570px; width: 880px;">
+            <br>
+            <p>Vous pouvez voir ci-dessous une visualisation du code PHP correspondant au Controller de la page de
+                connexion des utilisateurs. Vous pouvez constater que le controller récupère le "model" et la "view"
+                dont il à besoin pour faire apparaître la page et lui permettre de fonctionner correctement.</p>
+            <img src="imagesAP3/PHP_connexion_controller.PNG" style="height: 500px; width: 600px;">
+
+            <p>Et voici à quoi ressemble la page de connexion (Les erreurs d'index sont due au fait que les champs ne
+                sont pas remplis et ne devraient pas apparaître):</p>
+            <img src="imagesAP3/Site_connexion.PNG">
+            <br>
+
+            <p>Voici également le controller de la page d'affichage des détails du produits:</p>
+            <img src="imagesAP3/PHP_detail_produit.PNG" style="height: 500px; width: 600px;">
+            <br>
+            <p>Et ici à quoi ressemble la page du détail des produits. Cette page est donc toujours la même mais les
+                données changent selon l'article sélectionné et se que renvoie la base de données depuis le model au
+                controller:</p>
+            <img src="imagesAP3/Site_afficherProduit.PNG">
+        </header>
+    </section>
+
+    <footer>
+        <div class="colonne">
+            <h3>Pour me contacter</h3>
+            <p>Adresse Mail : mathysgelez26@gmail.com</p>
+            <p>Téléphone : 06 34 50 21 92</p>
+        </div>
+        <div class="colonne">
+            <h3>Mes Réseaux</h3>
+            <a href="https://www.linkedin.com/in/mathys-gelez-9a024a223/">
+                <p>Liens vers ma page linkedin</p>
+            </a>
+            <a href="https://github.com/Camomille26">
+                <p>Liens vers ma page Github</p>
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>

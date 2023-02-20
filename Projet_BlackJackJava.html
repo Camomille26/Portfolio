@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Mathys gelez</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <nav>
+        <div class="profile">
+            <img src="images/Moi2.PNG" alt="Mathys">
+            <h1>Mathys Gelez</h1>
+        </div>
+        <ul>
+            <a href="index.html">
+                <li>Présentation</li>
+            </a>
+            <a href="ProjectSelect.html">
+                <li>Les projets</li>
+            </a>
+            <a href="Mon_CV.html">
+                <li>Mon CV</li>
+            </a>
+            <a href="StageSelect.html">
+                <li>Stage</li>
+            </a>
+            <a href="synthese.html">
+                <li>Tableau de Synthèse</li>
+            </a>
+
+        </ul>
+    </nav>
+
+    <section class="page-content">
+        <header>
+            <h1>Mon jeu de blackJack</h1>
+            <h3>Résumé</h3>
+            <p>Afin d'user de mon temps libre et de mon expérience acquise lors des cours et des apprentissages sur
+                internet, j'ai codé un petit jeu qui permet de jouer au BlackJack comme dans un casino via l'interface
+                de commande de Visual Studio Code. Le code employé dans le programme et authentique (c'est à dire que
+                rien a été récupéré sur internet).</p>
+            <h3>Fonctionnement du jeu</h3>
+            <p>Au début le programme nous demande de sélectionner un nombre de jetons. Ce nombre sera sa réserve de
+                jetons depuis laquelle il pourra miser. Ensuite le joueur doit choisir un nombre de jetons à miser pour
+                la partie (valeur comprise entre 1 et 200). Enfin la partie commence et le jeu décrit les cartes
+                piochées par le joueur et il à le choix de continuer à piocher ou s'arrêter. Lors qu'il décide de
+                s'arrêter, le croupier virtuel pioche à son tour les cartes et termine son tour. Les valeurs des jeux
+                du joueur et du croupier sont énoncé puis comparé pour déterminer le gagnant. Si le joueur gagne il
+                gagne le double de sa mise. Si il réalise une égalité avec le croupier il récupère sa mise. Si le joueur
+                perd, il ne récupère aucun jetons. Le programme demande ensuite si il souhaite rejouer une partie et le
+                programme s'arrête lors que le joueur répond "non"</p>
+            <h3>Les objets et leurs constructeurs</h3>
+            <p>Pour réaliser ce programme il m'a fallu créer deux types d'objets différents:</p>
+            <ul>
+                <li>- Le joueur</li>
+                <li>- Le jeu de cartes</li>
+
+            </ul>
+
+            <p>Le joueur est l'objet permettant d'acquérir toute les informations du joueur tel que son nombre de
+                jetons, le nombre de jetons misé, la valeur de sa main, le calcul de ses gains (positifs ou
+                négatifs),... L'objet joueur est le même utilisé pour prendre en compte le jeu du croupier, à
+                l'exception que les valeurs de mises et de gains ne sont pas utilisés.</p>
+            <p>Le constructeur des objets "Joueur":</p>
+
+            <img src="imagesBlackJack/Constructeur_Joueur.PNG">
+
+            <p>Le jeu de cartes lui ne doit retenir qu'un compteur et un tableau de valeur pour recencer les cartes
+                du paquet. Le constructeur réalise donc un nouvel objet "paquetcarte" à chaque nouvelle partie en
+                s'appuyant sur un tableau de valeur contenant toute les cartes et leurs valeurs. Ils se charge ainsi
+                de réaliser le même tableau de valeur mais en changeant de manière aléatoire l'ordre des cartes.
+                Ainsi pour piocher, le joueur et le croupier prennent les cartes dans l'objet dans l'odre dans
+                lequel les cartes ont été mises, augmentant de 1 le compteur pour passer à la prochaine carte du
+                paquet après chaque pioche.</p>
+
+            <p>Le tableau de valeur des cartes:</p>
+
+            <img src="imagesBlackJack/Objet_Cartes.PNG" style="height: 600px; width: 880px;">
+
+            <p>Le constructeur du paquet de carte:</p>
+
+            <img src="imagesBlackJack/Constructeur_Cartes.PNG">
+
+            <br>
+            <br>
+
+            <h3>A quoi ressemble une partie du jeu:</h3>
+            <img src="imagesBlackJack/Partie.PNG" style="height: 650px; width: 1130px;">
+        </header>
+    </section>
+
+    <footer>
+        <div class="colonne">
+            <h3>Pour me contacter</h3>
+            <p>Adresse Mail : mathysgelez26@gmail.com</p>
+            <p>Téléphone : 06 34 50 21 92</p>
+        </div>
+        <div class="colonne">
+            <h3>Mes Réseaux</h3>
+            <a href="https://www.linkedin.com/in/mathys-gelez-9a024a223/">
+                <p>Liens vers ma page linkedin</p>
+            </a>
+            <a href="https://github.com/Camomille26">
+                <p>Liens vers ma page Github</p>
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>
