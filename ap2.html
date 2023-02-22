@@ -38,28 +38,28 @@
 
     <section class="page-content">
         <header>
-            <h1>AP2: L'application de gestion de remboursement</h1>
+            <h1>AP2: L'application de gestion de remboursements</h1>
             <h3>Résumé du Contexte</h3>
-            <p>Une entreprise nommé Galaxy envoie des salariés effectuer des visites dans des centre médicaux afin de
-                mettre à jour les connaissances sur le pesonnel médicale et les produits utilisés. Ces visites sont
-                remboursé par l’entreprise, qui souhaite avoir une application qui permettrai d’uniformiser le
-                suivit des visites. Ainsi nous avons eu pour mission de réaliser moi et trois autres camarades
+            <p>Une entreprise nommée Galaxy envoie des salariés effectuer des visites dans des centres médicaux afin de
+                mettre à jour les connaissances sur le pesonnel et les produits utilisés. Ces visites sont
+                remboursées par l’entreprise, qui souhaite avoir une application qui permettrait d’uniformiser le
+                suivi des visites. Ainsi nous avons eu pour mission de réaliser, trois autres camarades et moi-même,
                 l'application en respectant le cahier des charges.</p>
 
-            <h3>L'objectifs de l'application en détail</h3>
+            <h3>L'objectif de l'application en détails</h3>
             <p>L’application doit permettre à un utilisateur de s’identifier avec un login et un mot de passe. Un
                 utilisateur peut avoir deux rôles différents (sans avoir les deux en même temps): Visiteur et Comptable.
             </p>
             <ul>
                 <li>- Les visiteurs peuvent remplir des fiches de remboursement et leurs valeurs, c'est à dire le nombre
-                    de
-                    nuitée, de repas pris pendant la visite qu'il à effectué. Il peut également ajouter dans sa fiche
-                    des
-                    remboursement extra pour lequel il devra définir le nom et le montant lui même. </li>
+                    de nuitées, de repas pris pendant la visite qu'il a effectuée. Il peut également ajouter dans sa
+                    fiche des remboursements extras pour lesquels il devra définir le nom et le montant lui même. </li>
                 <br>
-                <li>- Les comptables peuvent analyser les fiches de remboursement remplie par les visiteurs afin de
-                    les valider pour que celle-ci puisse être archivé et que l’entreprise puisse prendre en charge le
-                    remboursement. Il pourront également valider ou non les remboursement extra définit par le visiteur
+                <li>- Les comptables peuvent analyser les fiches de remboursement remplies par les visiteurs afin de
+                    les valider pour que celles-ci puissent être archivées et que l’entreprise puisse prendre en charge
+                    le
+                    remboursement. Il pourront également valider ou non les remboursements extras définis par le
+                    visiteur
                     sur sa fiche.</li>
             </ul>
 
@@ -67,44 +67,44 @@
             <p>Afin de pouvoir effectuer le travail comme convenu et gagner du temps, nous avons divisé le groupe en
                 deux parties distinctes mais complémentaires:</p>
             <ul>
-                <li>- Un duo me comptant réalisant la structure de la base de donnée et tout ce qu'elle comprend ainsi
+                <li>- Un duo me comptant réalisant la structure de la base de données et tout ce qu'elle comprend ainsi
                     que la documentation du travail.</li>
                 <li>- Un autre duo en charge de comprendre le fonctionnement de SceneBuilder et d'établir le programme
                     en Java pour le relier à la BDD.</li>
             </ul>
-            <p>Nous avons également tenu un <b>Trello</b> pour nous organiser et définir les missions de chacuns dans le
-                groupe en tenant compte du temps qu'il nous restaient pour terminer le projet.</p>
+            <p>Nous avons également tenu un <b>Trello</b> pour nous organiser et définir les missions de chacun dans le
+                groupe en tenant compte du temps qu'il nous restait pour terminer le projet.</p>
 
             <br>
 
             <h2>La réalisation de ma mission: La conception de la base de données</h2>
             <br>
             <p>Afin que l'application puisse stocker et récupérer les données dont elle a besoin pour fonctionner
-                correctement, il faut impérativement avoir une bonne basse de données structurées correctement. La
+                correctement, il faut impérativement avoir une bonne base de données structurée correctement. La
                 réaliser est donc la mission que j'ai pris à coeur pour permettre à l'application de fonctionner.</p>
             <h3>Première étape: Réalisation du Dictionnaire de données</h3>
-            <p>Avant même de réfléchir à la structure de la base de donnée, il faut impérativement réaliser le
-                Dictionnaire de données pour répertorier la totalité des données qui seront utilisés. Il faut également
-                définir toute les caractéristiques de ces données à savoir:</p>
+            <p>Avant même de réfléchir à la structure de la base de données, il faut impérativement réaliser le
+                Dictionnaire de données pour répertorier la totalité des données qui seront utilisées. Il faut également
+                définir toutes les caractéristiques de ces données à savoir:</p>
             <ul>
                 <li>- Son type</li>
-                <li>- Sa taille (nombre de charactères)</li>
-                <li>- Son genre (élémentaire ou caclulé selon si la donnée est calculé au sein l'application ou non)
+                <li>- Sa taille (nombre de caractères)</li>
+                <li>- Son genre (élémentaire ou calculé selon si la donnée est calculée au sein de l'application ou non)
                 </li>
                 <li>- La possibilité ou non de servir d'identifiant</li>
                 <li>- L'obligation ou non d'exister pour certaines données</li>
             </ul>
-            <p>Voici un extrait du dictionnaire de donnée de l'application:</p>
+            <p>Voici un extrait du dictionnaire de données de l'application:</p>
             <img src="imagesAP2/DictionnaireDonnées.PNG" style="height: 600px; width: 1080px;">
 
             <h3>Seconde étape: Réalisation du MCD</h3>
             <p>Après avoir correctement rédigé les différentes données, il faut réaliser le MCD. Le MCD est un schéma
-                qui permet d'avoir une vision ordonnée de la structure de la base de donnée lors qu'elle est établi. Il
+                qui permet d'avoir une vision ordonnée de la structure de la base de données lorsqu'elle est établie. Il
                 faut donc déterminer les différentes entités qui seront les tables dans la BDD qui contiennent les
                 différentes données qui seront les champs dans la BDD.</p>
-            <p>Le MCD, comme le dictionnaire de donnée avant lui, est régulièrement mis à jour avec l'arrivée des
-                nouvelles fonctionnalités à ajouté ou contraintes rencontrés. Afin de réaliser le MCD, j'utilise le site
-                internet mocodo.net</p>
+            <p>Le MCD, comme le dictionnaire de données avant lui, est régulièrement mis à jour avec l'arrivée des
+                nouvelles fonctionnalités à ajouter ou contraintes rencontrées. Afin de réaliser le MCD, j'utilise le
+                site internet mocodo.net</p>
             <img src="imagesAP2/MCD_Debut.PNG" style="height: 570px; width: 880px;">
             <br>
             <p>Voici la dernière version du MCD pour la dernière version de l'application:</p>
@@ -112,10 +112,10 @@
             <br>
 
             <h3>Dernière étape: La construction de la BDD</h3>
-            <p>Maintenant que tout à été plannifié, il ne reste plus qu'à créer la bdd en se fiant au schéma réalisé.
+            <p>Maintenant que tout a été plannifié, il ne reste plus qu'à créer la bdd en se fiant au schéma réalisé.
                 Afin de réaliser la BDD j'utilise Wamp pour l'héberger localement sur ma machine et MySQL Workbench pour
-                la réaliser. Le plus important dans la création est de bien faire correspondre les champs avec la bonne
-                table et de réaliser les contraintes de clés étrangères en fonction des cardinalités réalisés
+                la créer. Le plus important dans la création est de bien faire correspondre les champs avec la bonne
+                table et de réaliser les contraintes de clés étrangères en fonction des cardinalités réalisées
                 précédemment dans le MCD.</p>
             <p>Réalisation de la BDD avec Workbench:</p>
             <img src="imagesAP2/Workbench.PNG" style="height: 570px; width: 1080px;">

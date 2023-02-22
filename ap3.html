@@ -44,20 +44,21 @@
                 Ainsi le site doit avoir plusieurs fonctionnalités:
             </p>
             <ul>
-                <li>- Faire apparaître les articles sur le site avec pour chacuns leurs pages produits.</li>
-                <li>- Localiser les articles pour afficher pour quel entrepôts et magasins les articles sont disponibles
+                <li>- Faire apparaître les articles sur le site avec pour chacun leurs pages produits.</li>
+                <li>- Localiser les articles pour afficher dans quels entrepôts et magasins les articles sont
+                    disponibles
                 </li>
                 <li>- Permettre à l'utilisateur de créer un compte client et de se connecter avec pour réaliser ses
                     achats en mettant les produits dans son panier.</li>
             </ul>
-            <p>Ainsi pour stocker toute ces informations il à fallu réaliser une base de donnée et utiliser le langage
-                PHP pour que le site codé et la base de donnée réalisé puisse échanger entre-elles.</p>
+            <p>Ainsi pour stocker toutes ces informations il a fallu réaliser une base de données et utiliser le langage
+                PHP pour que le site codé et la base de données réalisée puisse échanger entre-elles.</p>
             <br>
             <h2>La réalisation de la base de données</h2>
-            <p>Je me suis chargé, comme pour l'AP2, de réaliser une base de donnée afin que le site puisse faire
-                apparaître les articles de manière dynamique en s'appuyant sur ceux enregistré dans la bdd.</p>
-            <p>La difficulté avec ce projet c'est que la base de donnée à dû être complexe en vu du nombre conséquent
-                d'information à stocker. Pour chaque article vendu sur le site il fallait renseigner ces informations:
+            <p>Je me suis chargé, comme pour l'AP2, de réaliser une base de données afin que le site puisse faire
+                apparaître les articles de manière dynamique en s'appuyant sur ceux enregistrés dans la bdd.</p>
+            <p>La difficulté avec ce projet c'est que la base de données a dû être complexe en vu du nombre conséquent
+                d'informations à stocker. Pour chaque article vendu sur le site il fallait renseigner ces informations:
             </p>
             <ul>
                 <li>- La référence du produit</li>
@@ -67,19 +68,19 @@
                 <li>- La description du produit</li>
                 <li>- La quantité en stock disponible sur le site</li>
                 <li>- La quantité en stock pour chaque magasin</li>
-                <li>- Le où les différents lieux où l'article est stocké (magasin ou entrepôt) exprimé par le nom de la
+                <li>- Le ou les différents lieux où l'article est stocké (magasin ou entrepôt) exprimé par le nom de la
                     ville.</li>
             </ul>
-            <p>Pour chaque compte client il fallait également renseigner toute ces informations:</p>
+            <p>Pour chaque compte client il fallait également renseigner touts ces informations:</p>
             <ul>
-                <li>- Le Code Client: Trois lettres puis 8 chiffres auto-incrémenté</li>
+                <li>- Le Code Client: Trois lettres puis 8 chiffres auto-incrémentés</li>
                 <li>- le Nom et Prénom</li>
                 <li>- L'Email</li>
                 <li>- Le numéro de Téléphone</li>
                 <li>- La Date de Naissance</li>
                 <li>- Le Nombre enfants (optionnel)</li>
-                <li>- L'Age enfants (optionnel)</li>
-                <li>- La Liste Sport Pratiqués</li>
+                <li>- L'âge des enfants (optionnel)</li>
+                <li>- La Liste des sports pratiqués</li>
                 <li>- L'Historique des achats</li>
                 <li>- La Date du dernier achat</li>
             </ul>
@@ -96,13 +97,13 @@
             <br>
 
             <h3>Dernière étape: La construction de la BDD</h3>
-            <p>Voici l'affichage des noms de toutes les tables de la base de donnée:</p>
+            <p>Voici l'affichage des noms de toutes les tables de la base de données:</p>
             <img src="imagesAP3/workbench_nbTable.PNG" style="height: 300px; width: 250px;">
             <br>
-            <p>Voici l'affichage de tout les champs de la table produit:</p>
+            <p>Voici l'affichage de tous les champs de la table produit:</p>
             <img src="imagesAP3/Fonctionnement_table_produit.PNG" style="height: 200px; width: 800px;">
             <br>
-            <p>Voici l'affichage des données contenu dans la table produit:</p>
+            <p>Voici l'affichage des données contenues dans la table produit:</p>
             <img src="imagesAP3/Contenu_table_produit.PNG" style="height: 180px; width: 800px;">
             <br>
             <br>
@@ -110,22 +111,24 @@
 
             <h2>Réalisation du site en PHP</h2>
 
-            <p>Avec une base de données établi correctement, je suis passé à la réalisation du code en PHP pour réaliser
-                les fonctions permettant d'intéragir avec la base de donnée. L'apparence n'a pas pu être correctement
-                faite de part une mauvaise répartitions du temps et les problèmes rencontrés au sein du groupe.</p>
+            <p>Avec une base de données établie correctement, je suis passé à la réalisation du code en PHP pour
+                réaliser
+                les fonctions permettant d'intéragir avec la base de données. L'apparence n'a pas pu être correctement
+                faite de part une mauvaise répartition du temps et les problèmes rencontrés au sein du groupe.</p>
             <br>
             <p>Afin de réaliser le site, j'ai respecté la norme de réalisation MVC (Model View Controller) qui consiste
                 à répartir les différentes fonctions du site en différent répertoire. Ainsi le répertoire "View"
-                regroupe toute les fonctions dédiés à l'apparence du site, le répertoire "Model" est dédié aux fonctions
-                intéragissant avec la base de données et le répertoire "Controller" contient les fichiers permettant
+                regroupe toutes les fonctions dédiées à l'apparence du site, le répertoire "Model" est dédié aux
+                fonctions
+                intéragissant avec la base de données et le répertoire "Controller" qui contient les fichiers permettant
                 d'appeler les fonctions des deux autres répertoires pour assembler le site pour l'utilisateur.</p>
             <img src="imagesAP3/PHP_mvc.PNG">
             <br>
-            <p>Le fichier PHP contenu dans le répertoire model contient toute les différentes fonctions permettant
+            <p>Le fichier PHP contenu dans le répertoire model contient toutes les différentes fonctions permettant
                 d'appeler la base de données pour récupérer des informations (par exemple afficher les détails de
                 l'article correspondant à l'image que sélectionne l'utilisateur, récupérer les identifiants des
-                utilisateurs pour comparer que ceux entrer par l'utilisateur correspondent bien à un compte existant
-                ect...).</p>
+                utilisateurs pour vérifier que ceux entrer par l'utilisateur correspondent bien à un compte existant
+                etc...).</p>
             <img src="imagesAP3/PHP_modelBDD.PNG" style="height: 570px; width: 880px;">
             <br>
             <p>Vous pouvez voir ci-dessous une visualisation du code PHP correspondant au Controller de la page de
@@ -133,16 +136,16 @@
                 dont il à besoin pour faire apparaître la page et lui permettre de fonctionner correctement.</p>
             <img src="imagesAP3/PHP_connexion_controller.PNG" style="height: 500px; width: 600px;">
 
-            <p>Et voici à quoi ressemble la page de connexion (Les erreurs d'index sont due au fait que les champs ne
+            <p>Et voici à quoi ressemble la page de connexion (Les erreurs d'index sont dues au fait que les champs ne
                 sont pas remplis et ne devraient pas apparaître):</p>
             <img src="imagesAP3/Site_connexion.PNG">
             <br>
 
-            <p>Voici également le controller de la page d'affichage des détails du produits:</p>
+            <p>Voici également le controller de la page d'affichage des détails du produit:</p>
             <img src="imagesAP3/PHP_detail_produit.PNG" style="height: 500px; width: 600px;">
             <br>
             <p>Et ici à quoi ressemble la page du détail des produits. Cette page est donc toujours la même mais les
-                données changent selon l'article sélectionné et se que renvoie la base de données depuis le model au
+                données changent selon l'article sélectionné et ce que renvoie la base de données depuis le model au
                 controller:</p>
             <img src="imagesAP3/Site_afficherProduit.PNG">
         </header>
